@@ -1,0 +1,7 @@
+[user]
+	name = Aryan Raj
+	email = aryaraj132@gmail.com
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
