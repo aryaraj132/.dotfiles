@@ -43,6 +43,9 @@ keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap.set("n", "ss", ":split<Return><C-w>w", opts)
 keymap.set("n", "sv", ":vsplit<Return><C-w>w", opts)
 
+-- close current window
+keymap.set("n", "sw", "<C-w>c", opts)
+
 -- save and exit
 keymap.set("n", "<C-s>", ":update<Return>", opts)
 keymap.set("i", "<C-s>", "<Esc>:update<Return>", opts)
