@@ -39,6 +39,11 @@ keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
 -- keymap.set("v", "p", '"_dP', opts)
 
+-- use capslock for esc
+keymap.set("i", "<C-c>", "<esc>", opts)
+
+keymap.set("i", "<tab>", "<C-v><tab>", opts)
+
 -- Split window
 keymap.set("n", "ss", ":split<Return><C-w>w", opts)
 keymap.set("n", "sv", ":vsplit<Return><C-w>w", opts)
@@ -49,6 +54,9 @@ keymap.set("n", "sw", "<C-w>c", opts)
 -- save and exit
 keymap.set("n", "<C-s>", ":update<Return>", opts)
 keymap.set("i", "<C-s>", "<Esc>:update<Return>", opts)
+
+-- keymap to delete all buffers and windows
+keymap.set("n", "<C-x>", ":bufdo bdelete<Return>", opts)
 
 -- key mapping to close current buffer and window
 keymap.set("n", "<C-w>", ":bdelete<Return>", opts)
@@ -72,7 +80,7 @@ keymap.set("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
+    vim.diagnostic.goto_next()
 end, opts)
 
 -- neotree mappings
