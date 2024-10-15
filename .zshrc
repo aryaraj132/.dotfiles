@@ -151,6 +151,12 @@ git commit;
 git push;
 git checkout -;
 }
+
+function killport
+{
+  kill -9 $(lsof -t -i:$1)
+}
+
 alias ckt='git checkout'
 alias mm='cd /Users/aryan/Documents/Mailmodo && nvim'
 alias backend-express='cd /Users/aryan/Documents/Mailmodo/backend-express/ && nvim'
@@ -159,5 +165,6 @@ alias frontend='cd /Users/aryan/Documents/Mailmodo/mailmodo-frontend-v1/ && nvim
 alias air='$(go env GOPATH)/bin/air'
 alias nv='nvim'
 alias vim='nvim'
+alias pr='gh pr create'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
