@@ -6,6 +6,19 @@ return {
         opts = {},
     },
     {
+        "akinsho/toggleterm.nvim",
+        version = "*",
+        config = function(_, opts)
+            local toggleterm = require("toggleterm")
+            vim.keymap.set("n", "<C-`>", "<cmd>ToggleTerm direction=horizontal name=terminal<cr>", opts)
+            vim.keymap.set("n", "<C-'>", "<cmd>ToggleTerm direction=vertical name=terminal<cr>", opts)
+            vim.keymap.set("n", "<A-`>", "<cmd>TermSelect<cr>", opts)
+            toggleterm.setup({
+                autochdir = true,
+            })
+        end,
+    },
+    {
         "telescope.nvim",
         priority = 1000,
         dependencies = {

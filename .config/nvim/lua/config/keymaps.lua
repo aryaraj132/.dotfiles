@@ -80,8 +80,8 @@ keymap.set("n", "sk", "<C-w>k", opts)
 keymap.set("n", "sj", "<C-w>j", opts)
 
 -- navigate paragraphs up and down
-keymap.set("n", "<A-j>", "}", opts)
-keymap.set("n", "<A-k>", "{", opts)
+keymap.set("n", "<A-j>", "5j", opts)
+keymap.set("n", "<A-k>", "5k", opts)
 
 -- navigate paragraphs up and down in insert mode
 keymap.set("i", "<A-j>", "<C-o>}", opts)
