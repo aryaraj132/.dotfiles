@@ -25,7 +25,7 @@ vim.opt.tabstop = 2
 vim.opt.wrap = false
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
-vim.opt.wildignore:append({ "*/node_modules/*" })
+vim.opt.wildignore:append({ "*/node_modules/*", "*/build/*", "*/dist/*<D-s>" })
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.splitkeep = "cursor"

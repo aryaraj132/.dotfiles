@@ -30,13 +30,22 @@ keymap.set("n", "<C-enter>", "<cmd>Telescope lsp_implementations<CR>", opts)
 keymap.set("i", "<D-z>", "<esc>u<CR>i", opts)
 keymap.set("i", "<D-S-z>", "<esc><C-r><CR>i", opts)
 
+-- delete left word mapping
+keymap.set("i", "<A-backspace>", "<C-w>", opts)
+
+keymap.set("i", "<A-h>", "<S-left>", opts)
+keymap.set("i", "<A-l>", "<S-right>", opts)
+-- in normal mode
+keymap.set("n", "<A-h>", "b", opts)
+keymap.set("n", "<A-l>", "e", opts)
+
 -- delete without yank
 keymap.set("n", "<leader>d", '"_d', opts)
 keymap.set("v", "<leader>d", '"_d', opts)
 
 -- Move text up and down
-keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap.set("n", "<C-j>", ":m .+1<CR>==", opts)
+keymap.set("n", "<C-k>", ":m .-2<CR>==", opts)
 -- keymap.set("v", "p", '"_dP', opts)
 
 -- use capslock for esc
@@ -50,6 +59,7 @@ keymap.set("n", "sv", ":vsplit<Return><C-w>w", opts)
 
 -- close current window
 keymap.set("n", "sw", "<C-w>c", opts)
+keymap.set("i", "jj", "<esc>", opts)
 
 -- save and exit
 keymap.set("n", "<C-s>", ":update<Return>", opts)
@@ -69,6 +79,18 @@ keymap.set("n", "sl", "<C-w>l", opts)
 keymap.set("n", "sk", "<C-w>k", opts)
 keymap.set("n", "sj", "<C-w>j", opts)
 
+-- navigate paragraphs up and down
+keymap.set("n", "<A-j>", "}", opts)
+keymap.set("n", "<A-k>", "{", opts)
+
+-- navigate paragraphs up and down in insert mode
+keymap.set("i", "<A-j>", "<C-o>}", opts)
+keymap.set("i", "<A-k>", "<C-o>{", opts)
+
+-- move paragraphs up and down
+keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", opts)
+keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", opts)
+
 -- Resize window
 keymap.set("n", "<C-S><up>", ":resize +2<Return>", opts)
 keymap.set("n", "<C-S><down>", ":resize -2<Return>", opts)
@@ -79,9 +101,9 @@ keymap.set("n", "<leader>o", "<cmd>Telescope find_files<cr>", opts)
 keymap.set("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
-    vim.diagnostic.goto_next()
-end, opts)
+-- keymap.set("n", "<C-j>", function()
+--     vim.diagnostic.goto_next()
+-- end, opts)
 
 -- neotree mappings
 -- keymap.set("n", "<leader>e", ":Neotree filesystem toggle right<CR>", opts)

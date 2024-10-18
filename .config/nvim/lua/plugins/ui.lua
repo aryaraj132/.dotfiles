@@ -3,6 +3,11 @@ return {
         "nvimdev/dashboard-nvim",
         enabled = false,
     },
+    -- content awareness for smart indentation
+    {
+        "wellle/context.vim",
+        enabled = true,
+    },
     {
         "Darazaki/indent-o-matic",
         enabled = true,
