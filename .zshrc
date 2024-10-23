@@ -165,6 +165,7 @@ alias frontend='cd /Users/aryan/Documents/Mailmodo/mailmodo-frontend-v1/ && nvim
 alias air='$(go env GOPATH)/bin/air'
 alias nv='nvim'
 alias vim='nvim'
+alias vi='nvim'
 alias pr='gh pr create'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
