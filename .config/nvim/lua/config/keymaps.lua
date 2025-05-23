@@ -7,8 +7,12 @@ keymap.set("n", "x", '"_x')
 --keymap.set("n", "<leader>b", ":Neotree filesystem reveal right<CR>", opts)
 
 -- reverse 'j' and 'k' key functionality.
-keymap.set("n", "j", "k", opts)
-keymap.set("n", "k", "j", opts)
+--keymap.set("n", "j", "k", opts)
+--keymap.set("n", "k", "j", opts)
+--keymap.set("n", "<C-w>j", "<C-w>k", opts)
+--keymap.set("n", "<C-w>k", "<C-w>j", opts)
+--keymap.set("n", "<C-w><C-j>", "<C-w>k", opts)
+--keymap.set("n", "<C-w><C-k>", "<C-w>j", opts)
 
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
@@ -96,10 +100,10 @@ keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", opts)
 keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Resize window
-keymap.set("n", "<C-S><up>", ":resize +2<Return>", opts)
-keymap.set("n", "<C-S><down>", ":resize -2<Return>", opts)
-keymap.set("n", "<C-S><left>", ":vertical resize -2<Return>", opts)
-keymap.set("n", "<C-S><right>", ":vertical resize +2<Return>", opts)
+keymap.set("n", "<C-A-up>", ":resize +2<Return>", opts)
+keymap.set("n", "<C-A-down>", ":resize -2<Return>", opts)
+keymap.set("n", "<C-A-left>", ":vertical resize -2<Return>", opts)
+keymap.set("n", "<C-A-right>", ":vertical resize +2<Return>", opts)
 
 keymap.set("n", "<leader>o", "<cmd>Telescope find_files<cr>", opts)
 keymap.set("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
