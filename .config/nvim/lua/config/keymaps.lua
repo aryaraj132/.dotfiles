@@ -6,6 +6,10 @@ keymap.set("n", "x", '"_x')
 -- neotree
 --keymap.set("n", "<leader>b", ":Neotree filesystem reveal right<CR>", opts)
 
+-- reverse 'j' and 'k' key functionality.
+keymap.set("n", "j", "k", opts)
+keymap.set("n", "k", "j", opts)
+
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
