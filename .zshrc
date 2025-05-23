@@ -157,7 +157,12 @@ function killport
   kill -9 $(lsof -t -i:$1)
 }
 
-alias ckt='git checkout'
+function ckt
+{
+ git checkout $1;
+ git pull;
+}
+
 alias mm='cd /Users/aryan/Documents/Mailmodo && nvim'
 alias backend-express='cd /Users/aryan/Documents/Mailmodo/backend-express/ && nvim'
 alias microcosmos='cd /Users/aryan/Documents/Mailmodo/microcosmos/ && nvim'
