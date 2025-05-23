@@ -59,7 +59,6 @@ keymap.set("n", "sv", ":vsplit<Return><C-w>w", opts)
 
 -- close current window
 keymap.set("n", "sw", "<C-w>c", opts)
-keymap.set("i", "jj", "<esc>", opts)
 
 -- save and exit
 keymap.set("n", "<C-s>", ":update<Return>", opts)
